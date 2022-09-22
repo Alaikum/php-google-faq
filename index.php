@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../php-google-faq/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/794b4bbca7.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
     <title>Google Faq</title>
 </head>
 
@@ -17,7 +21,7 @@
         "Norme sulla privacy",
         "Termini di servizio",
         "Tecnologie",
-        "Domande frequenti",
+        "<a href=\"##\">Domande frequenti</a>",
     ];
     $domandeErisposte = [
         [
@@ -37,8 +41,8 @@
         ],
         [
             "domanda" => 'Perché il mio account è associato a un paese?',
-            "risposta" => '<ol><p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p>
-            <li> La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
+            "risposta" => '<p>Il tuo account è associato a un paese (o territorio) nei Termini di servizio per poter stabilire due cose:</p>
+            <ol><li> La società consociata Google che offre i servizi, tratta le tue informazioni ed è responsabile del rispetto delle leggi sulla privacy vigenti. Generalmente Google offre i propri servizi per i consumatori tramite una delle due società seguenti:
                 <ol type="a">
                 <li>Google Ireland Limited, se gli utenti sono residenti nello Spazio economico europeo (paesi dell\'Unione europea, oltre a Islanda, Liechtenstein e Norvegia) o in Svizzera.
                 </li> 
@@ -49,7 +53,7 @@
                  <h3>Stabilire il paese associato al tuo account</h3>
                  <p>Quando crei un nuovo Account Google, lo associamo a un paese in base a dove è stato creato. Per quanto riguarda gli account creati almeno un anno fa, usiamo il paese da cui accedi solitamente ai servizi Google, in genere i servizi in cui hai trascorso più tempo nell\'ultimo anno.</p>
                  <p>I viaggi frequenti solitamente non influiscono sul paese associato al tuo account. Se ti trasferisci in un altro paese, potrebbe occorrere circa un anno per aggiornare l\'associazione del paese.</p>
-                 <p>Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. <a href="##">Contattaci ***</a> se ritieni che il paese associato al tuo account sia sbagliato.</p>'
+                 <p>Se il paese associato al tuo account non corrisponde al tuo paese di residenza, il motivo potrebbe essere la differenza tra il paese in cui lavori e il paese in cui risiedi, l\'installazione di una rete privata virtuale (VPN) per mascherare il tuo indirizzo IP oppure la residenza vicino a un confine territoriale. <a href="##">Contattaci <i class="fa-solid fa-arrow-up-right-from-square"></i></a> se ritieni che il paese associato al tuo account sia sbagliato.</p>'
         ],
         [
             "domanda" => 'Come faccio a rimuovere informazioni su di me dai risultati di ricerca di Google?',
@@ -66,12 +70,25 @@
 
     <!-- PARTE HTML  -->
     <nav>
-        <ul>
+        <div class="link__logo">
+            <div>
+
+                <span class="blue">B</span>
+                <span class="red">o</span>
+                <span class="yellow">o</span>
+                <span class="blue">b</span>
+                <span class="green">l</span>
+                <span class="red">e</span>
+            </div>
+            <p > Privacy e temini</p>
+            <span class="logo"><i class="fa-brands fa-google-plus"></i></span>
+        </div>
+        <ul class="ul__nav">
             <?php
             foreach ($linkNav as $key => $link) {
             ?> <li class="nav__bar <?php echo ($key == count($linkNav) - 1) ? " active" : "" ?>"> <?= $link ?></li> <?php
             }
-         ?>
+            ?>
         </ul>
     </nav>
 
@@ -84,6 +101,8 @@
         }
         ?>
     </div>
+    
+    <footer><pc class='footer'>Make with love &hearts;</p></footer>
 
 </body>
 
