@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../php-google-faq/css/style.css">
     <title>Google Faq</title>
 </head>
 
 <body>
 
     <?php
-    $linkNav=[
+    $linkNav = [
         "Introduzione",
         "Norme sulla privacy",
         "Termini di servizio",
@@ -63,27 +64,26 @@
     ?>
 
 
-<!-- PARTE HTML  -->
-<nav>
-    <ul>
-       <?php 
-       foreach($linkNav as $key=> $link){
-    ?> <li class="nav__bar <?php if($key==count($linkNav)){echo('attiva');}?>"> <?=$link ?></li> <?php
-       } 
-       ?>
-    </ul>
-</nav>
+    <!-- PARTE HTML  -->
+    <nav>
+        <ul>
+            <?php
+            foreach ($linkNav as $key => $link) {
+            ?> <li class="nav__bar <?php echo ($key == count($linkNav) - 1) ? " active" : "" ?>"> <?= $link ?></li> <?php
+            }
+         ?>
+        </ul>
+    </nav>
 
 
-    <div>
-<?php foreach($domandeErisposte as $faq){
-     ?>
-     <?="<h2>$faq[domanda]</h2>";?>
-     <?=($faq['risposta']);
-
-}
- ?>    
-</div>
+    <div class="container">
+        <?php foreach ($domandeErisposte as $faq) {
+        ?>
+            <?= "<h2>$faq[domanda]</h2>"; ?>
+        <?= ($faq['risposta']);
+        }
+        ?>
+    </div>
 
 </body>
 
